@@ -1,0 +1,60 @@
+@charset "UTF-8";
+*{padding: 0; margin: 0;}
+.약{clear: both;}
+/* 자식은 부모의 넓이를 따라가고
+부모는 자식의 높이를 따라간다 */
+.전체{background-color: darkcyan;
+     padding: 20px;
+     width: 600px; 
+     margin: auto;   /* 영역을 가운데 정렬 */
+}
+.전체 .첫째자식{background-color: plum;
+               height: 500px;
+               transition: 0.3s;
+               background-repeat: no-repeat;   /* 배경이미지를 반복하지 말 것(한장만) */
+               background-size: cover;    /* 이미지의 가로 길이를 늘여서 맞춤 */
+               background-image: url(https://blog.kakaocdn.net/dn/XlVZH/btqIH50as13/LwCnDkeRzRz9kETtUMaHyk/img.jpg);}
+               
+.전체 .첫째자식:hover{
+               background-image: url(https://img.lovepik.com/photo/40108/1192.jpg_wh860.jpg);
+}
+
+.전체 .둘째자식{background-color: beige;
+               margin-top: 20px;
+}
+
+.전체 .둘째자식 .첫째손자{float: left; background-color: red;
+                        height: 200px; width: 31.3333%;  /* 소수점 이하 최대 4자리까지 표현 가능 */
+                        margin:0 1%;}
+                        /* margin: 1%;           상하좌우 
+                           margin: 1% 2%;        상하 좌우
+                           margin:1% 2% 3%;     상 좌우 하
+                           margin:1% 2% 3% 4%;  상 오른쪽 아래 왼쪽 */
+                           
+                           /* 마진을 오른쪽에만 2% 적용
+                              margin:0 2% 0 0;
+                              margin-right:2% */
+
+.전체 .둘째자식 .둘째손자{float: left; background-color: orange;
+                        height: 200px; width: 31.3333%;
+                        margin:0 1%;}
+.전체 .둘째자식 .셋째손자{float: left; background-color: yellow;
+                        height: 200px; width: 31.3333%;
+                        margin:0 1%;}
+
+.전체 .셋째자식{background-color: darkseagreen;
+               margin-top: 20px;}
+    .전체 .셋째자식:after{content: ""; display: block; clear: both;}  /* after는 영역 내 제일 막내 */
+                                                                        /* after{content:} 는 공식 */
+.전체 .셋째자식 .one{background-color: lightcyan;
+                    width: 24.25%; float: left; height: 200px; margin-right: 1%;}
+.전체 .셋째자식 .two{background-color: aquamarine;
+                    width: 24.25%; float: left; height: 200px; margin-right: 1%;}
+.전체 .셋째자식 .two span{color:red;} /* 인라인요소(inline) */
+
+.전체 .셋째자식 .three{background-color: cyan;
+                     width: 24.25%; float: left; height: 200px; margin-right: 1%;}
+.전체 .셋째자식 .four{background-color: darkturquoise;
+                     width: 24.25%; float: left; height: 200px;} 
+                        /* 색조합 참고사이트: https://colorhunt.co/ */
+                        /* #붙여넣기 */
